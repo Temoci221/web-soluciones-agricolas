@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contenedores, casetas y maquinaria agrícola en Albacete</title>
+<meta name="description" content="Contenedores marítimos, casetas de obra, depósitos IBC, aperos agrícolas, vallado y leña. Entrega en Albacete y provincia. Pide presupuesto por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#1f3a4d; --ink:#17232c; --paper:#f1f0ea; --ochre:#e3a62a;
+  --rust:#9c4a2f; --line:#cfcdc2; --white:#fff;
+  --head:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Source Sans 3",Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:18px/1.55 var(--body);color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:.01em}
+
+/* Cabecera */
+.top{background:var(--ink);color:var(--paper)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--head);font-size:1.5rem;font-weight:700;text-decoration:none}
+.top nav a{margin-left:18px;text-decoration:none;font-size:.95rem}
+.top nav a:hover{text-decoration:underline}
+
+/* Hero: chapa de contenedor */
+.hero{
+  background:
+    repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 6px,transparent 6px 36px),
+    var(--steel);
+  color:var(--white);padding:72px 0 80px;border-bottom:8px solid var(--ochre)}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:700;max-width:14ch}
+.hero p{max-width:46ch;margin:18px 0 28px;font-size:1.15rem}
+.btn{display:inline-block;background:var(--ochre);color:var(--ink);font-weight:600;
+  padding:14px 24px;text-decoration:none;border-radius:3px;border:2px solid var(--ochre)}
+.btn:hover{background:var(--white);border-color:var(--white)}
+.btn.alt{background:transparent;color:var(--white);border-color:var(--white);margin-left:10px}
+.btn.alt:hover{background:var(--white);color:var(--ink)}
+
+section{padding:64px 0}
+section h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:8px}
+.lead{max-width:58ch;margin-bottom:28px}
+
+/* Catálogo */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{font:inherit;padding:8px 16px;background:transparent;border:2px solid var(--steel);
+  color:var(--steel);border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--steel);color:var(--white)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.item{background:var(--white);border:1px solid var(--line);border-left:6px solid var(--steel);padding:20px}
+.item[data-cat="agricola"]{border-left-color:var(--rust)}
+.item[data-cat="cercado"]{border-left-color:var(--ochre)}
+.item h3{font-size:1.5rem;margin-bottom:6px}
+.item p{font-size:.95rem;margin-bottom:14px}
+.item a{font-weight:600}
+.item[hidden]{display:none}
+
+/* Cómo funciona */
+.how{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.how ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;list-style:none;padding:0;counter-reset:s}
+.how li{counter-increment:s;padding-top:14px;border-top:4px solid var(--ochre)}
+.how li::before{content:counter(s);font:700 2rem var(--head);display:block}
+.how strong{display:block;margin-bottom:4px}
+
+/* Contacto */
+.contact{background:var(--ink);color:var(--paper)}
+.contact p{margin-bottom:22px;max-width:52ch}
+footer{background:#0f171d;color:#9aa6ad;font-size:.85rem;padding:20px 0}
+
+@media (max-width:560px){
+  .top nav{display:none}
+  .btn.alt{margin:12px 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">NOMBRE DEL NEGOCIO</a>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Contenedores, casetas y maquinaria para el campo</h1>
+      <p>Te los llevamos a la finca, a la obra o a casa en Albacete y provincia. Dinos qué necesitas y te damos precio y plazo de entrega.</p>
+      <a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20presupuesto" target="_blank" rel="noopener">Pedir presupuesto por WhatsApp</a>
+      <a class="btn alt" href="#catalogo">Ver catálogo</a>
+    </div>
+  </div>
+
+  <section id="catalogo">
+    <div class="wrap">
+      <h2>Catálogo</h2>
+      <p class="lead">Consulta disponibilidad y plazo de entrega de cada producto. Los precios dependen del modelo, el estado y el transporte.</p>
+
+      <div class="filters" role="group" aria-label="Filtrar por categoría">
+        <button type="button" data-f="todos" aria-pressed="true">Todo</button>
+        <button type="button" data-f="estructuras" aria-pressed="false">Estructuras</button>
+        <button type="button" data-f="agricola" aria-pressed="false">Maquinaria agrícola</button>
+        <button type="button" data-f="cercado" aria-pressed="false">Cercados</button>
+        <button type="button" data-f="temporada" aria-pressed="false">Leña y pellets</button>
+        <button type="button" data-f="logistica" aria-pressed="false">Palés</button>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="how" id="como">
+    <div class="wrap">
+      <h2>Cómo comprar</h2>
+      <ol>
+        <li><strong>Escríbenos</strong>Cuéntanos qué necesitas y dónde lo quieres.</li>
+        <li><strong>Recibe presupuesto</strong>Te enviamos precio, fotos reales y plazo de entrega.</li>
+        <li><strong>Confirma el pedido</strong>Acordamos pago y fecha de entrega.</li>
+        <li><strong>Lo recibes</strong>Lo llevamos hasta tu parcela, obra o domicilio.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <h2>Pide tu presupuesto</h2>
+      <p>Respondemos por WhatsApp. Si no encuentras lo que buscas en el catálogo, escríbenos y lo buscamos por ti.</p>
+      <a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20presupuesto" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> NOMBRE DEL NEGOCIO · Albacete · Precios y disponibilidad sujetos a confirmación.</div>
+</footer>
+
+<script>
+const PRODUCTOS=[
+ {c:"estructuras",n:"Contenedores marítimos",d:"De 20 y 40 pies, nuevos y usados. Para almacén, taller u obra."},
+ {c:"estructuras",n:"Casetas de obra",d:"Metálicas y prefabricadas, listas para usar."},
+ {c:"estructuras",n:"Casetas de jardín y módulos",d:"Madera y prefabricados para jardín, finca o trastero."},
+ {c:"estructuras",n:"Oficinas y vestuarios modulares",d:"Módulos para obras, naves y eventos."},
+ {c:"agricola",n:"Arados y aperos",d:"Arados, gradas, cultivadores y rodillos de segunda mano revisados."},
+ {c:"agricola",n:"Remolques agrícolas",d:"Remolques para transporte en finca."},
+ {c:"agricola",n:"Depósitos IBC de 1.000 L",d:"Para agua de riego y uso agrícola. Consulta si lo necesitas apto para alimentos."},
+ {c:"agricola",n:"Cubas y abrevaderos",d:"Para ganado y riego."},
+ {c:"cercado",n:"Malla ganadera y vallado",d:"Rollos de malla, postes y accesorios."},
+ {c:"cercado",n:"Pastor eléctrico solar",d:"Equipos para cercado eléctrico sin conexión a la red."},
+ {c:"cercado",n:"Puertas y cancelas metálicas",d:"Para fincas, naves y parcelas."},
+ {c:"temporada",n:"Leña",d:"Por sacos o por camión, con reparto."},
+ {c:"temporada",n:"Pellets, astillas y briquetas",d:"Combustible para estufas y calderas."},
+ {c:"logistica",n:"Palés nuevos y usados",d:"Para almacén, transporte o bricolaje."}
+];
+const WA="https://wa.me/34600000000?text=";
+const grid=document.getElementById("grid");
+grid.innerHTML=PRODUCTOS.map(p=>
+ `<article class="item" data-cat="${p.c}"><h3>${p.n}</h3><p>${p.d}</p>`+
+ `<a href="${WA}${encodeURIComponent('Hola, quiero información sobre: '+p.n)}" target="_blank" rel="noopener">Consultar precio</a></article>`
+).join("");
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+ grid.querySelectorAll(".item").forEach(i=>i.hidden=b.dataset.f!=="todos"&&i.dataset.cat!==b.dataset.f);
+}));
+document.getElementById("y").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
